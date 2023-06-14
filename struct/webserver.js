@@ -20,7 +20,7 @@ app.get("/assets/css/:file", (req, res) => {
   if (typeof file === "undefined") {
     res.send("Path was undefined!");
   } else {
-    if (fs.existsSync(path.join(__dirname(`../public/assets/css/${file}`)))) {
+    if (fs.existsSync(path.join(__dirname, `../public/assets/css/${file}`))) {
       res.sendFile(path.join(__dirname, `../public/assets/css/${file}`));
     } else {
       res.send("File was not found [Err404]");
@@ -34,7 +34,7 @@ app.get("/assets/js/:file", (req, res) => {
   if (typeof file === "undefined") {
     res.send("Path was undefined!");
   } else {
-    if (fs.existsSync(path.join(__dirname(`../public/assets/js/${file}`)))) {
+    if (fs.existsSync(path.join(__dirname, `../public/assets/js/${file}`))) {
       res.sendFile(path.join(__dirname, `../public/assets/js/${file}`));
     } else {
       res.send("File was not found [Err404]");
@@ -48,8 +48,22 @@ app.get("/assets/img/:file", (req, res) => {
   if (typeof file === "undefined") {
     res.send("Path was undefined!");
   } else {
-    if (fs.existsSync(path.join(__dirname(`../public/assets/img/${file}`)))) {
+    if (fs.existsSync(path.join(__dirname, `../public/assets/img/${file}`))) {
       res.sendFile(path.join(__dirname, `../public/assets/img/${file}`));
+    } else {
+      res.send("File was not found [Err404]");
+    }
+  }
+});
+
+// fonts
+app.get("/assets/fonts/:file", (req, res) => {
+  const file = req.params.file;
+  if (typeof file === "undefined") {
+    res.send("Path was undefined!");
+  } else {
+    if (fs.existsSync(path.join(__dirname, `../public/assets/fonts/${file}`))) {
+      res.sendFile(path.join(__dirname, `../public/assets/fonts/${file}`));
     } else {
       res.send("File was not found [Err404]");
     }

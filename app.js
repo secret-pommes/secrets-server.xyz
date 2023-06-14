@@ -9,7 +9,7 @@ app.listen(PORT, () => {
   console.log(`secrets-server started listening on port: ${PORT}`);
 });
 
-fs.readdirSync("./structs").forEach((file) => {
+fs.readdirSync("./struct").forEach((file) => {
   app.use(require(`./struct/${file}`));
 });
 

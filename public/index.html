@@ -1,21 +1,86 @@
 <!--
     as i said i will make my sites in next.js in the future..
-    (i still use HTML5 :/) yeah and as you can see im still stuck in HTML
+    (i still use HTMLv5 :/) yeah and as you can see im still stuck in HTML
     insted of using a framework like next.js, vue.js
 -->
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/fonts.css" />
 
     <title>secrets-server.xyz | Main</title>
   </head>
   <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/particles.js"></script>
+  <script>
+    particlesJS.load("particles-js", "/assets/js/particles.json", function () {
+      /* professional code i know :) */
+    });
+  </script>
   <body>
+    <div id="particles-js"></div>
+    <center>
+      <div class="banner">
+        <a class="secrets-server_banner" href="/">secrets-server.xyz</a>
+      </div>
+      <footer class="banner_footer">
+        <a id="footer_moto">N/A</a>
+      </footer>
+    </center>
+    <div class="current_projects">
+      <center>
+        <a style="position: relative; bottom: -55px; font-size: 35px"
+          >List of "running" projects:</a
+        >
+      </center>
+      <div class="projects">
+        <center>
+          <!--ZEILE: 1-->
+          <div class="container">
+            <div class="themediaserver">
+              <center>
+                <a style="font-size: 35px" href="/secretsmediaserver"
+                  >The SecretMediaServer</a
+                >
+              </center>
+              <p class="likeA">
+                The Secret-Media-Server:
+                <br />
+                was made in the end of 2022 the server
+                <br />
+                is now dead!<br />
+                But you can still watch movies that are saved on it, Enjoy!
+              </p>
+            </div>
+          </div>
+          <br />
+          <!--ZEILE: 2-->
+          <div class="container">
+            <div class="247lawinserver2">
+              <center>
+                <a style="font-size: 35px" href="/247lawinserver2"
+                  >The 24/7 LawinServerV2</a
+                >
+              </center>
+              <p class="likeA">
+                The (24/7) LawinServerV2:
+                <br />
+                backend that allows you to run old Fortnite versions!
+                <br />
+                XMPP and custom matchmaking is fully supported on this moded*
+                version of LawinServer!
+              </p>
+            </div>
+          </div>
+        </center>
+      </div>
+    </div>
 
-    
+    <footer style="position: absolute; bottom: 0px">
+      <a id="version">{Version is N/A}</a>
+    </footer>
   </body>
 </html>
