@@ -7,6 +7,12 @@ body {
 
 a {
   color: white;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+p {
+  color: white;
+  font-family: "Chakra Petch", sans-serif;
 }
 
 #particles-js {
