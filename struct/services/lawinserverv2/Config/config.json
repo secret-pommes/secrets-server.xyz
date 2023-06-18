@@ -1,0 +1,15 @@
+{
+  "server": {
+    "PORT": 80
+  },
+  "moderators": [ "733248179579125830", "223785046891298816", "564010262898933780" ],
+  "mongodb": {
+    "database": "mongodb://127.0.0.1/lawindb"
+  },
+  "chat": {
+    "//": "Disabling global chat can help the server to perform faster as less resources are used.",
+    "EnableGlobalChat": false
+  },
+  "matchmakerIP": "secrets-server.xyz:443",
+  "gameServerIP": "secrets-server.xyz::7777"
+}
