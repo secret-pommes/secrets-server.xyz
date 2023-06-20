@@ -14,7 +14,7 @@ const tokens = JSON.parse(
 app.use(rateLimit({ windowMs: 0.5 * 60 * 1000, max: 45 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-mongoose.connect("mongodb://127.0.0.1/lawindb");
+//mongoose.connect("mongodb://127.0.0.1/lawindb");
 
 if (!fs.existsSync(path.join(__dirname, "./ClientSettings")))
   fs.mkdirSync(path.join(__dirname, "./ClientSettings"));
@@ -60,7 +60,7 @@ app.use("/services/lawinserverv2", require("./routes/voice.js"));
 app.use("/services/lawinserverv2", require("./routes/xmppRequests.js"));
 
 // if endpoint not found, return this error
-app.use("/services/lawinserverv2", (req, res, next) => {
+app.use("/services/lawinserverv2/*", (req, res, next) => {
   error.createError(
     "errors.com.epicgames.common.not_found",
     "Sorry the resource you were trying to find could not be found",
